@@ -6,6 +6,7 @@ import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent } from './heroes.component';
 import { HeroService } from './hero.service';
 import { RouterModule } from '@angular/router';
+import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,10 @@ import { RouterModule } from '@angular/router';
       {
         path: 'heroes',
         component: HeroesComponent
+      },
+      {
+        path: 'dashboard',
+        component: DashboardComponent
       }
     ])
   ],
@@ -23,7 +28,8 @@ import { RouterModule } from '@angular/router';
   declarations: [
     AppComponent,
     HeroDetailComponent,
-    HeroesComponent
+    HeroesComponent,
+    DashboardComponent
   ],
 
   providers: [
