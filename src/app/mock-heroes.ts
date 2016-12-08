@@ -13,3 +13,14 @@ export const HEROES: Hero[] = [
   { id: 20, name: 'Tornado' }
 ];
 
+type HeroMap = {
+  [index:number]: Hero
+}
+
+let heroMap: HeroMap = {};
+
+for (let hero of HEROES) {
+  heroMap[hero.id] = hero;
+}
+
+export const HEROMAP: HeroMap = heroMap;
