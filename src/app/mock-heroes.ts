@@ -17,10 +17,9 @@ type HeroMap = {
   [index:number]: Hero
 }
 
-let heroMap: HeroMap = {};
-
-for (let hero of HEROES) {
-  heroMap[hero.id] = hero;
-}
+let heroMap: HeroMap = HEROES.reduce((map:{}, hero:Hero) => {
+  map[hero.id] = hero;
+  return map;
+}, {});
 
 export const HEROMAP: HeroMap = heroMap;
