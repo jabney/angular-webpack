@@ -1,6 +1,10 @@
 import { Hero } from './hero';
 
-export const HEROES: Hero[] = [
+type HeroMap = {
+  [index:number]: Hero
+}
+
+let heroes: Hero[] = [
   { id: 11, name: 'Mr. Nice' },
   { id: 12, name: 'Narco' },
   { id: 13, name: 'Bombasto' },
@@ -13,13 +17,10 @@ export const HEROES: Hero[] = [
   { id: 20, name: 'Tornado' }
 ];
 
-type HeroMap = {
-  [index:number]: Hero
-}
-
-let heroMap: HeroMap = HEROES.reduce((map:{}, hero:Hero) => {
+let heroMap: HeroMap = heroes.reduce((map:HeroMap, hero:Hero) => {
   map[hero.id] = hero;
   return map;
-}, {});
+}, {} as HeroMap);
 
+export const HEROES: Hero[] = heroes;
 export const HEROMAP: HeroMap = heroMap;
