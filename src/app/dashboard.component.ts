@@ -10,7 +10,8 @@ import { HeroService } from './hero.service';
   selector: 'my-dashboard',
   // With webpack, we can use the './' prefix to resolve template paths.
   // (See above module.id note and link.)
-  templateUrl: './dashboard.component.html'
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
