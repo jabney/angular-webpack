@@ -4,7 +4,8 @@ import { Hero } from './hero';
 
 @Component({
   selector: 'hero-form',
-  templateUrl: 'hero-form.component.html'
+  templateUrl: 'hero-form.component.html',
+  styleUrls: ['hero-form.component.css']
 })
 export class HeroFormComponent {
   powers = [
