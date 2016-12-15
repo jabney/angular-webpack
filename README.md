@@ -1,2 +1,2 @@
-# angular-webpack
-A starter project using the [Angular Webpack setup](https://angular.io/docs/ts/latest/guide/webpack.html).
+# Angular Transclusion Tutorial
+https://scotch.io/tutorials/angular-2-transclusion-using-ng-content
