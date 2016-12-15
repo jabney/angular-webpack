@@ -5,12 +5,17 @@ import { TabComponent } from './tab.component';
   selector: 'tabs',
   template: `
     <ul>
-      <li *ngFor="let tab of tabs" (click)="selectTab(tab)">
+      <li *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.active">
         {{tab.tabTitle}}
       </li>
     </ul>
     <ng-content></ng-content>
-  `
+  `,
+  styles: [`
+    .active {
+      list-style-type: circle;
+    }
+  `]
 })
 export class TabsComponent {
   tabs: TabComponent[] = [];
