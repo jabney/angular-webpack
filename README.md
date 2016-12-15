@@ -1,2 +1,2 @@
-# angular-webpack
-A starter project using the [Angular Webpack setup](https://angular.io/docs/ts/latest/guide/webpack.html).
+# Tabs Component Tutorial
+http://blog.thoughtram.io/angular/2015/04/09/developing-a-tabs-component-in-angular-2.html
