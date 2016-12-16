@@ -6,14 +6,20 @@ import { TabComponent } from './tab.component';
   template: `
     <ul>
       <li *ngFor="let tab of tabs" (click)="selectTab(tab)" [class.active]="tab.active">
-        {{tab.tabTitle}}
+        <div *ngIf="true">
+          {{tab.tabTitle}}
+        </div>
       </li>
     </ul>
     <ng-content></ng-content>
   `,
   styles: [`
+    ul {
+      list-style-type:circle;
+    }
     .active {
-      list-style-type: circle;
+      list-style-type: disc;
+      font-weight: bold;
     }
   `]
 })
