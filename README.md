@@ -1,2 +1,2 @@
-# angular-webpack
-A starter project using the [Angular Webpack setup](https://angular.io/docs/ts/latest/guide/webpack.html).
+# component-interaction
+https://angular.io/docs/ts/latest/cookbook/component-communication.html
