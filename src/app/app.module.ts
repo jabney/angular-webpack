@@ -14,12 +14,17 @@ import { VersionChildComponent } from './version-child.component';
 import { VoterComponent } from './voter.component';
 import { VoteTakerComponent } from './vote-taker.component';
 
+import { CountdownLocalVariableParentComponent } from './countdown-lv-parent.component';
+import { CountdownTimerComponent } from './countdown-timer.component';
+
 @NgModule({
   imports: [
     BrowserModule
   ],
   declarations: [
     AppComponent,
+    CountdownLocalVariableParentComponent,
+    CountdownTimerComponent,
     HeroParentComponent,
     HeroChildComponent,
     NameParentComponent,
