@@ -10,7 +10,7 @@ export class CountdownTimerComponent implements OnInit, OnDestroy {
 
   intervalId = 0;
   message = '';
-  seconds = 11;
+  seconds = 10;
 
   start() {
     this.countDown();
