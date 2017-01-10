@@ -3,7 +3,17 @@ import { MissionService } from './mission.service';
 
 @Component({
   selector: 'mission-control',
-  template: ``,
+  template: `
+    <h2>Mission Control</h2>
+    <button (click)="announce()">Announce Mission</button>
+    <my-astronaut *ngFor="let astronaut of astronauts"
+      [astronaut]="astronaut">
+    </my-astronaut>
+    <h3>History</h3>
+    <ul>
+      <li *ngFor="let event of history">{{event}}</li>
+    </ul>
+  `,
   providers: [MissionService]
 })
 export class MissionControlComponent {
