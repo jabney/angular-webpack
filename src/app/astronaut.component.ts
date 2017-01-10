@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs/Subscription';
   selector: 'my-astronaut',
   template: `
     <p>
-      {{astronaut}}: <strong>Mission</strong>
+      {{astronaut}}: <strong>{{mission}}</strong>
       <button
         (click)="confirm()"
         [disabled]="!announced || confirmed">
@@ -16,8 +16,27 @@ import { Subscription } from 'rxjs/Subscription';
   `
 })
 export class AstronautComponent implements OnDestroy {
+  @Input() astronaut: string;
+  mission = '<no mission announced>';
+  confirmed = false;
+  announced = false;
+  subscription: Subscription;
+
+  constructor(private missionService: MissionService) {
+    this.subscription = missionService.missionAnnounced$.subscribe(
+      mission => {
+        this.mission = mission;
+        this.announced = true;
+        this.confirmed = false;
+      });
+  }
+
+  confirm() {
+    this.confirmed = true;
+    this.missionService.confirmMission(this.astronaut);
+  }
 
   ngOnDestroy() {
-    // this.subscription.unsubscribe();
+    this.subscription.unsubscribe();
   }
 }
