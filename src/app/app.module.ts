@@ -18,6 +18,9 @@ import { CountdownTimerComponent } from './countdown-timer.component';
 import { CountdownLocalVariableParentComponent } from './countdown-lv-parent.component';
 import { CountdownViewChildParentComponent } from './countdown-vc-parent.component';
 
+import { MissionControlComponent } from './mission-control.component';
+import { MissionService } from './mission.service';
+
 @NgModule({
   imports: [
     BrowserModule
@@ -29,6 +32,7 @@ import { CountdownViewChildParentComponent } from './countdown-vc-parent.compone
     CountdownTimerComponent,
     HeroParentComponent,
     HeroChildComponent,
+    MissionControlComponent,
     NameParentComponent,
     NameChildComponent,
     VersionParentComponent,
