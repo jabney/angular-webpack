@@ -20,6 +20,7 @@ import { CountdownViewChildParentComponent } from './countdown-vc-parent.compone
 
 import { MissionControlComponent } from './mission-control.component';
 import { MissionService } from './mission.service';
+import { AstronautComponent } from './astronaut.component';
 
 @NgModule({
   imports: [
@@ -27,6 +28,7 @@ import { MissionService } from './mission.service';
   ],
   declarations: [
     AppComponent,
+    AstronautComponent,
     CountdownLocalVariableParentComponent,
     CountdownViewChildParentComponent,
     CountdownTimerComponent,
