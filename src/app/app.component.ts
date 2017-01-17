@@ -8,5 +8,5 @@ import '../../public/css/styles.css';
 })
 
 export class AppComponent {
-  title = 'Minimal NgModule';
+  subtitle = '(v1)';
 }
