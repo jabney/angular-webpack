@@ -28,7 +28,7 @@ export class ContactComponent implements OnInit {
   }
 
   next() {
-    let ix = this.contacts.indexOf(this.contact);
+    let ix = 1 + this.contacts.indexOf(this.contact);
     if (ix >= this.contacts.length) {
       ix = 0;
     }
