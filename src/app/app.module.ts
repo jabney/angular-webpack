@@ -8,10 +8,12 @@ import { UserService } from './user.service';
 
 import { ContactModule } from './contact/contact.module';
 
+import { AppRoutingModule } from './app-routing.module';
+
 @NgModule({
-  imports: [ BrowserModule, ContactModule ],
+  imports: [BrowserModule, ContactModule, AppRoutingModule],
   declarations: [AppComponent, HighlightDirective, TitleComponent],
-  providers: [ UserService ],
-  bootstrap: [ AppComponent ]
+  providers: [UserService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
