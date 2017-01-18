@@ -5,26 +5,17 @@ import { AppComponent } from './app.component';
 import { HighlightDirective } from './highlight.directive';
 import { TitleComponent } from './title.component';
 import { UserService } from './user.service';
-import { AwesomePipe } from './contact/awesome.pipe';
-import { ContactComponent } from './contact/contact.component';
-import { ContactService } from './contact/contact.service';
+import { ContactModule } from './contact/contact.module';
 
-import {
-  HighlightDirective as ContactHighlightDirective
-} from './contact/highlight.directive';
 
 @NgModule({
-  imports: [ BrowserModule, FormsModule ],
+  imports: [ BrowserModule, FormsModule, ContactModule ],
   declarations: [
     AppComponent,
     HighlightDirective,
     TitleComponent,
-
-    AwesomePipe,
-    ContactComponent,
-    ContactHighlightDirective,
   ],
-  providers: [ UserService, ContactService ],
+  providers: [ UserService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
