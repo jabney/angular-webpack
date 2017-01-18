@@ -10,11 +10,7 @@ import { ContactModule } from './contact/contact.module';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, ContactModule ],
-  declarations: [
-    AppComponent,
-    HighlightDirective,
-    TitleComponent,
-  ],
+  declarations: [AppComponent, HighlightDirective, TitleComponent],
   providers: [ UserService ],
   bootstrap: [ AppComponent ]
 })
