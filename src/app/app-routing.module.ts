@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'contact', pathMatch: 'full' },
-  // { path: 'crisis', loadChildren: './crisis/crisis.module#CrisisModule' },
+  { path: 'crisis', loadChildren: './crisis/crisis.module#CrisisModule' },
   { path: 'heroes', loadChildren: './hero/hero.module#HeroModule' }
 ];
 
