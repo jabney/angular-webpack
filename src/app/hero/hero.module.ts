@@ -6,15 +6,20 @@ import { HeroRoutingModule } from './hero-routing.module';
 import { HeroComponent } from './hero.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroListComponent } from './hero-list.component';
-import { HighlightDirective } from './highlight.directive';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-  imports: [CommonModule, FormsModule, HeroRoutingModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    HeroRoutingModule,
+    SharedModule
+  ],
   declarations: [
     HeroComponent,
     HeroDetailComponent,
-    HeroListComponent,
-    HighlightDirective]
+    HeroListComponent
+  ]
 })
 export class HeroModule {
 
