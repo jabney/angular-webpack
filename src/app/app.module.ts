@@ -13,7 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     ContactModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule.forRoot({userName: 'Miss Marple  '})
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
