@@ -6,10 +6,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { CrisisListComponent } from './crisis-list.component';
 import { HeroListComponent } from './hero-list.component';
+import { PageNotFoundComponent } from './page-not-found.component.ts';
 
 const routes: Routes = [
   { path: 'crisis-center', component: CrisisListComponent },
-  { path: 'heroes', component: HeroListComponent }
+  { path: 'heroes', component: HeroListComponent },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
